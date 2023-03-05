@@ -12,7 +12,7 @@ int main()
 
     srand(time(0));
 
-    random = rand()%1000 + 500;
+    random = rand()%(max-min+1) + 500;
 
 
     random2 = min + (rand()/div);
