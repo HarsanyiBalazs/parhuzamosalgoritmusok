@@ -18,7 +18,7 @@ int main()
     random2 = min + (rand()/div);
 
 
-    printf("A random szám: %d\n",random);
-    printf("A random2 szám: %lf\n",random2);
+    printf("A random szÃ¡m: %d\n",random);
+    printf("A random2 szÃ¡m: %lf\n",random2);
     return 0;
 }
