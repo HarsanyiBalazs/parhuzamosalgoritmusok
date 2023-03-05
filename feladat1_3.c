@@ -6,6 +6,6 @@ int main()
 {
     printf("Hello world!\n");
     Sleep(5000);
-    printf("5 m·sodperc telt el\n");
+    printf("5 m√°sodperc telt el\n");
     return 0;
 }
