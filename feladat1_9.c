@@ -34,5 +34,6 @@ int main(int argc, char *argv[])
         fprintf(fptr," %d ",numbers[i]);
 
    }
+   fclose(fptr); 
    return 0;
 }
