@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1678554436 source:c:\users\glyta\desktop\prog\feladat1_7\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+
