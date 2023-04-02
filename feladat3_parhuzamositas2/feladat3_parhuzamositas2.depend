@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1680437441 source:c:\users\glyta\desktop\paralgoritmusok\feladat3_parhuzamositas2\main.c
+	<pthread.h>
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<windows.h>
+
