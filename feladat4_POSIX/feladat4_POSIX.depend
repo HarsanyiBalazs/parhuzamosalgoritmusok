@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1681666374 source:c:\users\glyta\desktop\paralgoritmusok\feladat4_posix\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<math.h>
+	<pthread.h>
+	<windows.h>
+
