@@ -111,8 +111,7 @@ double lagrange_interpolation_par(int size,double* x,double* y,double target_x)
 int main(){
     int i,size;
     double interpolation_result;
-    double target_x;  //Value of x for which interpolated value is required.
-    //Arrays to store the x and y data-points.
+    double target_x;
     double* x;
     double* y;
 
@@ -120,10 +119,10 @@ int main(){
     clock_t passed_time;
     srand(1234);
 
-    size=4000;
+    size=1000;
     x=generate_data_x(size);
     y=generate_data(size);
-    target_x=500;
+    target_x=500.5;
 
 
     /*
@@ -133,9 +132,9 @@ int main(){
     }
     */
     printf("x: %lf y: %lf\n",x[500],y[500]);
-    //printf("x: %lf y: %lf\n",x[1002],y[1002]);
+    printf("x: %lf y: %lf\n",x[501],y[501]);
 
-    omp_set_num_threads(4) ;
+    omp_set_num_threads(2) ;
 
     passed_time = clock();
     interpolation_result=lagrange_interpolation_seq(size,x,y,target_x);
