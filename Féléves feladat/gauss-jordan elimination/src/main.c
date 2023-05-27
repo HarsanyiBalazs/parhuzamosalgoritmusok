@@ -4,7 +4,7 @@
 #include <time.h>
 #include <omp.h>
 
-const int n = 500;
+const int n = 5;
 
 /**
  * Generate the data for 1 dimensional array.
@@ -20,7 +20,8 @@ void generate_data(double b[],int size)
 
 /**
  * Generate the data for 2 dimensional array.
- */
+ */l
+
 void generate_data_2d(double a[][n],int size)
 {
     int i,j;
@@ -33,6 +34,7 @@ void generate_data_2d(double a[][n],int size)
         }
     }
 }
+
 /**
  * Solve the equation using Gauss-Jordan elimination.
  */
@@ -91,27 +93,11 @@ int main()
 
     srand(123);
 
-    /*
-    a[0][0]=2;
-    a[0][1]=4;
-    a[0][2]=3;
-    a[1][0]=5;
-    a[1][1]=6;
-    a[1][2]=7;
-    a[2][0]=8;
-    a[2][1]=9;
-    a[2][2]=10;
-
-    b[0]=19;
-    b[1]=38;
-    b[2]=56;
-    */
-    
     generate_data(b,size);
     generate_data_2d(a,size);
     
-
-    /*for( i=0;i<size;i++)
+    
+    for( i=0;i<size;i++)
     {
         printf("\n");
         for(int j=0;j<n;j++)
@@ -123,9 +109,9 @@ int main()
     for( i=0;i<size;i++)
     {
         printf("%lf\n",b[i]);
-    } */
-
-    omp_set_num_threads(1) ;
+    } 
+    
+    omp_set_num_threads(2) ;
 
     passed_time=clock();
     gauss_jordan(a,b,x,size);
@@ -133,7 +119,7 @@ int main()
     time_taken = ((double)passed_time)/CLOCKS_PER_SEC;
 
 
-    /*
+    
     printf("\n\n finished arrays:\n\n");
     for(i=0;i<size;i++)
     {
@@ -149,15 +135,15 @@ int main()
     {
         printf("%lf\n",b[i]);
     }
-    */
+    
 
-    /*
+    
     printf("\n");
     for(i=0;i<size;i++)
     {
         printf("%lf\n",x[i]);
     }
-    */
+    
     printf("The program took %f seconds to execute", time_taken);
 
     return 0;
