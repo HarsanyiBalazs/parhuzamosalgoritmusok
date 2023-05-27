@@ -5,7 +5,7 @@
 #include <pthread.h>
 #include <windows.h>
 
-int THREAD_LIMIT = 1;
+int THREAD_LIMIT;
 int CURRENT_THREAD_NUMBER=1;
 pthread_mutex_t thread_number_mutex = PTHREAD_MUTEX_INITIALIZER;
 
@@ -50,14 +50,18 @@ int partition(int* values, int p, int r, int x)
 
     i = p - 1;
     j = r + 1;
-    while (i < j) {
-        do {
+    while (i < j) 
+    {
+        do 
+        {
             ++i;
         } while (values[i] < x);
-        do {
+        do 
+        {
             --j;
-            } while (values[j] > x);
-        if (i < j) {
+        } while (values[j] > x);
+        if (i < j) 
+        {
         temp = values[i];
         values[i] = values[j];
         values[j] = temp;
@@ -116,6 +120,8 @@ int main(int argc, char* argv[])
     int size;
     int i,j;
     clock_t passed_time;
+
+    THREAD_LIMIT= 4;
 
     srand(123);
 
